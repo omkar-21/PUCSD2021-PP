@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+     <title>CollegeWorlD</title>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+</head>
+
+<body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+     <section class="navbar custom-navbar navbar-fixed-top" role="navigation">
+          <div class="container">
+               <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <div [ngbCollapse]="isCollapsed" class="collapse navbar-collapse" id="navbarsDefault">
+                         <ul class="nav navbar-nav navbar-nav-first">
+                              
+                              <a class="navbar-brand" href="#">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CollegeWorLD</a>
+                              <button class="navbar-toggle" type="button" (click)=" !isCollapsed"
+                                   data-target=".navbar-collapse" aria-controls="navbarsDefault" aria-expanded="false"
+                                   aria-label="Toggle navigation">
+                                   <span class="icon icon-bar"></span>
+                                   <span class="icon icon-bar"></span>
+                                   <span class="icon icon-bar"></span>
+                              </button>
+                              <li><a href="#top" class="smoothScroll">Home</a></li>
+                              <li><a href="#services" class="smoothScroll">Services</a></li>
+                              <li><a href="#about" class="smoothScroll">About</a></li>
+                         </ul>
+                    </div>
+               </nav>
+               <div class="logut"><button pButton type="button" label="Logout" (click)="logout()" class="p-button-raised p-button-rounded"></button></div>
+
+          </div>
+     </section>
+<section id="top">
+     <ngb-carousel *ngIf="images" class="home-slider">
+               <ng-template ngbSlide>
+                    <div class="picsum-img-wrapper">
+                         <img [src]="images[3]" alt="Random first slide">
+                    </div>
+                    <div class="carousel-caption caption">
+                         <div class="col-md-6 col-sm-12">
+
+                              <h3>{{latestnews[0]}}</h3>
+                              <a href="http://localhost:4200/news" class="section-btn btn btn-default-sm smoothScroll">Discover more</a>
+                         </div>
+                    </div>
+               </ng-template>
+               <ng-template ngbSlide>
+                    <div class="picsum-img-wrapper">
+                         <img [src]="images[4]" alt="Random second slide">
+                    </div>
+                    <div class="carousel-caption caption">
+                         <div class="col-md-6 col-sm-12">
+
+                              <h3>{{latestexam[0]}}</h3>
+                              <br>
+                              <a href="http://localhost:4200/exam" class="section-btn ">Discover more</a>
+                         </div>
+
+                    </div>
+               </ng-template>
+               <ng-template ngbSlide>
+                    <div class="picsum-img-wrapper">
+                         <img [src]="images[5]" alt="Random third slide">
+                    </div>
+                    <div class="carousel-caption caption">
+                         <div class="col-md-6 col-sm-12">
+
+                              <h3>{{latestnews[0]}} Exam</h3>
+                              <a href="http://localhost:4200/news" class="section-btn btn btn-default-sm smoothScroll">Discover more</a>
+                         </div>
+
+                    </div>
+               </ng-template>
+          </ngb-carousel>
+     </section>
+     <br><br>
+
+<section id="services">
+     <div class="row">
+          <div class="card col-md-4 col-lg-4 col-sm-4 ">
+
+               <p-card class="innercard" [style]="{width: '360px'}" styleClass="p-card-shadow"
+                    [style]="{'margin-left': '.10em'}">
+                    <ng-template pTemplate="header">
+                         <img alt="Card" [src]="images[0]" class="cardimage">
+                         <a href="http://localhost:4200/college/" class="cardlink">Find Colleges</a>
+                    </ng-template>
+               </p-card>
+          </div>
+          <div class="card col-md-4 col-lg-4 col-sm-4 ">
+               <p-card class="p-card p-card-body" [style]="{width: '360px'}" styleClass="p-card-shadow"
+                    [style]="{'margin-left': '.10em'}">
+                    <ng-template pTemplate="header">
+                         <img alt="Card" [src]="images[1]" class="cardimage">
+
+                         <a href="http://localhost:4200/exam/" class="cardlink">Exams</a>
+                    </ng-template>
+               </p-card>
+          </div>
+          <div class="card col-md-4 col-lg-4 col-sm-4 ">
+
+               <p-card class="innercard" [style]="{width: '360px'}" styleClass="p-card-shadow"
+                    [style]="{'margin-left': '.10em'}">
+                    <ng-template pTemplate="header">
+                         <img alt="Card" [src]="images[2]" class="cardimage">
+                         <a href="http://localhost:4200/news/" class="cardlink">Newsletter</a>
+                    </ng-template>
+               </p-card>
+          </div>
+     </div>
+
+</section>
+
+<section id="about">
+     <div class="row2">
+          
+          <span class="about">Subscribe To Our Newsletter<br>
+           <span class="about2"> COLLEGE NOTIFICATION &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; EXAM NOTIFICATIONFICATION &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; NEWS UPDATE
+              <br>
+               <input [(ngModel)]="input.email_id" id="firstname" type="text" placeholder="ENTER YOUR EMAIL ID"> &nbsp;&nbsp;
+               <input [(ngModel)]="input.mobile_no" id="firstname" type="text" placeholder="ENTER YOUR MOBILE NO"> &nbsp;&nbsp;
+
+<br>
+<p-confirmDialog header="Confirmation" icon="pi pi-exclamation-triangle"></p-confirmDialog>
+<button (click)="confirm()" pButton type="submit" label="submit" ></button>
+<p-messages></p-messages>
+
+                                     </span>  <br><br>
+                                   </span>
+          
+     </div>
+</section>
+</body>
+
+</html>

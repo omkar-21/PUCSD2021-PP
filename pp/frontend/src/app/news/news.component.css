@@ -1,0 +1,27 @@
+h2{
+  color: #0d0c0c;
+  font-size: 19px;
+  font-weight: bold;
+  line-height: 28px;
+  margin-bottom: 16px;
+}
+/* .myFieldSetStyle.pui-fieldset{
+} */
+.myFieldSetStyle .pui-fieldset-legend
+{
+
+    background:none !important;
+    font-weight:lighter;
+
+}
+
+.card{
+  margin: 3%;
+  padding: 2%;
+
+}
+.panel-container  {
+
+ 
+  margin: -0.5%;
+}

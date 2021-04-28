@@ -1,0 +1,51 @@
+<!-- <html>
+    <div style="text-align: center;">
+      <h1>
+        Register or login
+      </h1>
+      <input [(ngModel)]="input.username" placeholder="User Name"><br>
+      <input [(ngModel)]="input.password" placeholder="Password" type=password ><br>
+      <button (click)="onRegister()" >Register User</button>
+      <button (click)="onLogin()" >Login User</button>
+    </div>
+  </html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Student help desk </title>
+</head>
+
+<body>
+  <div class="full-page">
+    <div class="navbar">
+      <div>
+
+        <a href='website.html'>CollegeWorLD </a>
+
+      </div>
+      <nav>
+        <ul id='MenuItems'>
+          <li><button class='loginbtn' onclick="document.getElementById('login-form').style.display='block'"
+              style="width:auto;">Login</button></li>
+        </ul>
+      </nav>
+    </div>
+    <div class='login-page'>
+      <div class="form-box">
+        <form id='login' class='input-group-login'>
+          <input [(ngModel)]="input.username" name="pp" type='text' class='input-field' placeholder='Email Id' required>
+          <input [(ngModel)]="input.password" name="18148" type='password' class='input-field' placeholder='Enter Password' required>
+          <button (click)="onLogin()" type='submit' class='submit-btn'>Log in</button>
+          <button (click)="onRegister()" type='submit' class='submit-btn'>Register</button>
+
+        </form>
+       
+      </div>
+</div>
+  </div>
+</body>
+
+</html>

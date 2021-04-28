@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+</head>
+
+<body>
+    <br>
+    <div class="card">
+
+        <h2> See All Trending News All Around The World </h2>
+        <div class="panel-container" *ngFor="let new of news[0].data">
+        <p-panel [toggleable]="true" [collapsed]="true" >
+            <ng-template pTemplate="header">
+                {{new.heading}}
+            </ng-template>
+            {{new.news}}
+
+        </p-panel>
+        <br>
+    </div>
+</div>
+</body>
+</html>

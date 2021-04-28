@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-1">
+                <img class="logoImg" src="../../assets/college.png" alt="logo" />
+            </div>
+
+            <div class="col">
+                <h1> Collges List</h1>
+            </div>
+
+        </div>
+
+        <div class="row">
+        </div>
+
+
+        <p-dataView #dv [value]="comments[0]"
+        [rows]=10 [paginator]="true" paginatorPosition="both"
+        [lazy]="true" [totalRecords]="totalRecords" layout="list"
+        >
+            <!-- Table Header -->
+            <p-header>
+                <div class="ui-g">
+                    <div class="ui-g-8" style="text-align: left; font-size: 25px;">
+                        <h2> List of all Top Rank Colleges in India Based On 2021 Ranking </h2>
+                    </div>
+                    <div class="ui-g-4" style="text-align: right;">
+                            <p-dataViewLayoutOptions></p-dataViewLayoutOptions>
+                    </div>
+                </div>
+            </p-header>
+        
+            <!-- List view -->
+        
+            <ng-template let-comment pTemplate="listItem">
+                <div class="ui-g-4">
+                    <div class="ui-g">
+                        <div class="ui-g-3" style="text-align: center; height: 100%">
+                            <img id="user-image" [src]="comment.image" />
+                        </div>
+                        <div class="ui-g-9">
+                                <div class="ui-g-12 comment-name"><span>{{comment.name}} </span></div>
+                                <div class="ui-g-12 comment-email" ><span>{{comment.location}}</span> </div>                        </div>
+                    </div>
+                    <hr class="ui-widget-content" style="border-top:0">
+                </div>
+            </ng-template>
+        
+            <!-- Grid view -->
+            <ng-template let-comment pTemplate="gridItem">
+                    <div style="padding:3px" class="ui-g-12 ui-md-3">
+                        <p-panel [header]="comment.id" [style]="{'text-align':'center'}">
+                            <img id="user-image" [src]="comment.image">
+                            <div class="ui-g-12 comment-name"><span>{{comment.name}} </span></div>
+                            <div class="ui-g-12 comment-email" ><span>{{comment.location}}</span> </div>
+                    </p-panel>
+                    </div>
+                </ng-template>
+        </p-dataView>
+
+
+
+
+        <!-- <div class="row">
+            <div class="col">
+                <p-card header="Modern College Of ASC" subheader="Location : pune" [style]="{width: '360px'}"
+                    styleClass="p-card-shadow">
+                    <div class=college>
+                        <ng-template pTemplate="header">
+                            <img alt="Card" src="../../assets/modern.jpeg">
+                            <div class=" top-left">
+                                
+                               <span class="top-left-text"> HELP DESK RATING </span><br>
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                               <span class="top-left-text"> 4.0/10 </span>
+                            </div>
+
+                        </ng-template>
+                    </div>
+                    <div class="row">
+                        <div class="col ">
+                            <span class="money border border-white"> $ 1000</span><br>
+                            <span class="discription">MBA/PGDM - TOTAL FESS </span>
+                        </div>
+                        <div class="col">
+                            <span class="money"> $ 1000</span><br>
+                            <span class="discription">MBA/PGDM - TOTAL FESS </span>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col rating">
+                            <span> RANKED 1 OUT OF 50 </span><br>
+                            <p style="font-size: 13px;"> FINANCIAL EXPRESS</p>
+                        </div>
+</div>
+                    <ng-template pTemplate="footer">
+                        <p-button label="Save" icon="pi pi-check"></p-button>
+                        <p-button label="Cancel" icon="pi pi-times" styleClass="p-button-secondary"
+                            [style]="{'margin-left': '.5em'}"></p-button>
+                    </ng-template>
+                </p-card>
+            </div>
+
+        </div> -->
+    </div>
+
+
+
+</body>
+
+</html>
